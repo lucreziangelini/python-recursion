@@ -1,0 +1,11 @@
+#Given a list of strings, write a function that returns the number of strings in the list that have the first character equal to the last
+
+def funzione (L):
+# @param L: list
+	
+	if len(L) == 0:
+		return 0
+	elif L[0][0] == L[0][-1]:
+		return 1 + funzione(L[1:])
+	else:
+		return funzione(L[1:])
