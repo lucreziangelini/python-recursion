@@ -1,0 +1,15 @@
+#Write a recursive function that, given a string s, returns a string obtained by removing all consecutively repeated characters from s, 
+#except the first occurrence (e.g., if s = 'aaabbcccc', the function should return 'abc'; if s = 'ababcc', the function should return 'ababc').
+
+def deleteDuplicate(s):
+    # @param s: str
+    # @return str
+    if len(s) <= 1:
+        return s
+    elif s[0] == s[1]:
+        return deleteDuplicate(s[1:])
+    else:
+        return s[0] + deleteDuplicate(s[1:])
+
+s = "ababcc"
+print(deleteDuplicate(s))
