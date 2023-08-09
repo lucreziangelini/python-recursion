@@ -1,0 +1,13 @@
+#Write a recursive function that, given a list L of strings, returns as a result a string formed by concatenating all the strings in L that have odd length. 
+#If the list does not contain strings of odd length, the function returns an empty string
+
+def func(list):
+    # @param list: list
+    # @return str
+    if not list:
+	    return ""
+    elif len(list[0]) % 2 == 1:
+        return list[0] + func(list[1:])
+    else:
+        return func(list[1:])
+
