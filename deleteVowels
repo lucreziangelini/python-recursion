@@ -1,0 +1,14 @@
+def deleteVowels(s):
+    # @param s: str
+    # @return str
+    vocal = "a, e, i, o, u"
+    if len(s) == 0:
+        return s
+    elif s[0] in vocal:
+        return deleteVowels(s[1:])
+    else:
+        return s[0] + deleteVowels(s[1:])
+
+#usages
+s = "pippo"
+print(deleteVowels(s))
