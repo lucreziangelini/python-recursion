@@ -1,0 +1,13 @@
+#Write a recursive function that, given a string s, returns true if the string contains only consecutive pairs formed
+#by a numeric digit and an alphabetical character; false otherwise. Note: remember the isdigit() and isalpha() methods of the string data type in Python.
+
+def recursive(s):
+    # @param s: str
+    # @return bool
+    if len(s) == 0:
+        return True
+    elif len(s) <= 1:
+        return False
+    else:
+        return s[0].isdigit() and s[1]. isalpha() and recursive(s[2:])
+
