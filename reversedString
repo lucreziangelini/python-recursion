@@ -1,0 +1,8 @@
+# Write a recursive function that, given a string s, returns a string consisting of the reversed characters of s.
+def reverse(s):
+  # @param s: str
+  # @return str
+    if len(s) <= 1:
+        return s
+    else: 
+        return s[-1] + reverse(s[:-1])
