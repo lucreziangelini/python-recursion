@@ -1,3 +1,5 @@
+# Write a recursive function that, given a string s, returns the string obtained from s by removing the vowels
+
 def deleteVowels(s):
     # @param s: str
     # @return str
