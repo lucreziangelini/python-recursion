@@ -1,0 +1,21 @@
+#Write a recursive function that, given a string s, a string c of length 1, and an integer n, returns the value true if c
+#is present AT LEAST n times in the string s, false otherwise.
+
+def funzione_ricorsiva(s, c, n):
+    # @param s: str
+    # @param c: str
+    # @param n: int
+    # @return bool
+    if n == 0:
+        return True
+    elif n > len(s):
+        return False
+    else:
+        if (s[0] == c):
+            n -= 1
+        return funzione_ricorsiva(s[1:], c, n)
+
+
+
+# usage
+print(funzione_ricorsiva("abcdcfc", "f", 2))
