@@ -1,0 +1,30 @@
+# Given a string s of any length, write a recursive function that: returns the number of numeric digits (possibly repeated) present in s,
+# or returns a list formed by the individual numeric digits (possibly repeated) present in s.
+#Examples: s = 'h9u8j91'
+#returns: 4
+#returns: ['9', '8', '9', '1']"
+
+
+def func(str):
+    # @param str: str
+    # @return int
+
+    if not str:
+        return 0
+    elif str[0].isdigit():
+        return 1 + func(str[1:])
+    else:
+        return func(str[1:])
+
+#OR
+def func(str):
+    # @param str: str
+    # @return list
+
+    if not str:
+        return []
+    elif str[0].isdigit():
+        return [int(str[0])] + func(str[1:])
+    else:
+        return func(str[1:])
+
